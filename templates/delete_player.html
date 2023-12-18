@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Player</title>
+    <style>
+        body {
+            background-image: url('/static/h3.jpg');
+            background-size: 105%;
+            text-align: center;
+            background-color: #f1f39b; /* Replace with your desired background color */
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        h1, p {
+            margin: 10;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            margin: 20px;
+            text-decoration: underline;
+            color: rgb(3, 3, 103);
+            font-size: 40px;
+        }
+
+        a:hover {
+            background-color: #ede6e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Delete a Player</h1>
+    <form method="post" action="{{ url_for('delete_player') }}">
+        <label for="username">Enter Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <input type="submit" value="Delete Player"style="font-weight: bold;">
+    </form>
+    <p><a href="{{ url_for('admin_menu') }}">Back to Admin Menu</a></p>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        body {
+            background-image: url('/static/h3.jpg');
+            background-size: 105%;
+            text-align: center;
+            background-color: #f1f39b; /* Replace with your desired background color */
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        h1, p {
+            margin: 10;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            margin: 20px;
+            text-decoration: underline;
+            color: rgb(3, 3, 103);
+            font-size: 20px;
+        }
+
+        a:hover {
+            background-color: #ede6e6;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Create your account</h1>
+    <form method="post" action="{{ url_for('sign_up') }}">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+        <input type="submit" value="Sign Up" style="font-weight: bold;">
+    </form>
+    <p>{{ message }}</p>
+    <p>Already have an account?<br><a href="/login"><b>Login here</b></a></p></br>.</p>
+</body>
+</html>

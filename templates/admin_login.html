@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+        body {
+            background-image: url('/static/h3.jpg');
+            background-size: 105%;
+            text-align: center;
+            background-color: #f1f39b; /* Replace with your desired background color */
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        h1, p {
+            margin: 10;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            margin: 20px;
+            text-decoration: underline;
+            color: rgb(3, 3, 103);
+            font-size: 40px;
+        }
+
+        a:hover {
+            background-color: #ede6e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Login</h1><b>
+    <form method="post" action="{{ url_for('admin') }}">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:  </label>
+        <input type="password" id="password" name="password" required><br>
+    
+        <input type="submit" value="Login">
+    </form></b>
+    <p>{{ message }}</p>
+</body>
+</html>

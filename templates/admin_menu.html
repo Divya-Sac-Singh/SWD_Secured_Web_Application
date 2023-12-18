@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Menu</title>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Game</title>
+    <style>
+        body {
+            background-image: url('/static/h3.jpg');
+            background-size: 105%;
+            text-align: center;
+            background-color: #f1f39b; /* Replace with your desired background color */
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        h1, p {
+            margin: 10;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            margin: 20px;
+            text-decoration: underline;
+            color: rgb(3, 3, 103);
+            font-size: 40px;
+        }
+
+        a:hover {
+            background-color: #ede6e6;
+        }
+
+        .menu-button {
+            width: 180px; /* Set the desired width */
+            height: 60px; /* Set the desired height */
+            font-size: 10px; /* Optional: Set the font size */
+            font-weight: bold; /* Optional: Make the text bold */
+            background-color: #4037a8; /* Optional: Set button background color */
+            color: #ffffff; /* Optional: Set button text color */
+            cursor: pointer; /* Optional: Add a cursor pointer on hover */
+            
+        }
+
+    </style>
+</head>
+
+
+</head>
+<body>
+    <h1>Admin Menu</h1>
+
+    <form method="post" action="{{ url_for('admin_menu') }}">
+        <button class="menu-button" type="submit" name="choice" value="view_all_players"><b>View all registered players</b></button>
+        <button class="menu-button" type="submit" name="choice" value="add_player"><b>Add a player</b></button>
+        <button class="menu-button" type="submit" name="choice" value="delete_player"><b>Delete a player</b></button>
+        <button class="menu-button" type="submit" name="choice" value="update_player"><b>Update player details</b></button>
+        <button class="menu-button" type="submit" name="choice" value="logout"><b>Logout</b></button>
+    </form>
+
+</body>
+</html>

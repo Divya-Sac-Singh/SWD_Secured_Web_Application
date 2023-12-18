@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Game - Gameplay</title>
+    <style>
+        body {
+            background-image: url('/static/h3.jpg');
+            background-size: 105%;
+            text-align: center;
+            background-color: #f1f39b; /* Replace with your desired background color */
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        h1, p {
+            margin: 10;
+        }
+
+        p {
+            display: flex;
+            justify-content: center;
+        }
+
+        a {
+            margin: 20px;
+            text-decoration: underline;
+            color: rgb(3, 3, 103);
+            font-size: 20px;
+        }
+
+        a:hover {
+            background-color: #ede6e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Gameplay Page, {{ username }}!</h1>
+    <p><b>Let the game begin!</b></p>
+    <form method="post" action="{{ url_for('gameplay', username=username) }}">
+        <label><b>Choose an option:</b></label>
+        <label for="play"><b>Play</b></label>
+        <input type="radio" id="play" name="game_option" value="play" required>
+        <label for="quit"><b>Quit</b></label>
+        <input type="radio" id="quit" name="game_option" value="quit" required>
+        <br><br>
+        <input type="submit" value="Submit" style="font-weight: bold;">
+    </form>
+    <p><a href="{{ url_for('home') }}">Return to Home Page</a></p>
+</body>
+</html>
